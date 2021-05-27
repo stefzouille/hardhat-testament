@@ -17,7 +17,7 @@ describe('Testament', function () {
   describe('Deployement', function () {
     it('Has name motherfucker', async function () {
       Testament = await ethers.getContractFactory('Testament');
-      testament = await Testament.connect(dev).deploy(owner.address, doctor.address);
+      testament = await Testament.connect(doctor).deploy(owner.address, doctor.address);
       await testament.deployed();
       expect();
     });
