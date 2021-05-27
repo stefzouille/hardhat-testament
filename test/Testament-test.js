@@ -6,7 +6,6 @@ const { expect } = require('chai');
 
 describe('Testament', function () {
   let dev, owner, doctor, Testament, testament, alice, bob, charlie, dan;
-  const NAME = 'Testament';
 
   beforeEach(async function () {
     [dev, owner, doctor, alice, bob, charlie, dan] = await ethers.getSigners();
