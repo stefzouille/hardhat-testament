@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 
-import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/utils/Address.sol";
 
 contract Testament {
     using Address for address payable;

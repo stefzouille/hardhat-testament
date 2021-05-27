@@ -5,15 +5,21 @@
 const { expect } = require('chai');
 
 describe('Testament', function () {
-  let dev, owner, alice, bob, charlie, dan;
-  const INIT_SUPPLY = ethers.utils.parseEther('1000000');
-  const NAME = 'Duck';
-  const SYMBOL = 'DCK';
-  const DECIMALS = 18;
+  let dev, owner, doctor, Testament, testament, alice, bob, charlie, dan;
+
   beforeEach(async function () {
-    [dev, owner, alice, bob, charlie, dan] = await ethers.getSigners();
-    Duck = await ethers.getContractFactory('Duck');
-    const ethBalanceBefore = await alice.getBalance();
-    duck = await Duck.connect(dev).deploy(owner.address, INIT_SUPPLY);
-    await duck.deployed();
+    [dev, owner, doctor, alice, bob, charlie, dan] = await ethers.getSigners();
+    Testament = await ethers.getContractFactory('Testament');
+    testament = await Testament.connect(dev).deploy(owner.address, doctor.address);
+    await testament.deployed();
   });
+
+  describe('Deployement', function () {
+    it('Has name motherfucker', async function () {
+      Testament = await ethers.getContractFactory('Testament');
+      testament = await Testament.connect(dev).deploy(owner.address, doctor.address);
+      await testament.deployed();
+      expect();
+    });
+  });
+});
