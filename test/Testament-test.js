@@ -20,4 +20,14 @@ describe('Testament', function () {
         'Testament: You cannot define the owner and the doctor as the same person.');
     });
   });
+  describe('Who is the best?', function () {
+    it('Your are the best in the world coconut.', async function () {
+      await expect();
+    });
+  });
+  describe('Who is dead?', function () {
+    it('Not me i am too young to die', async function () {
+      await expect();
+    });
+  });
 });
