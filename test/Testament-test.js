@@ -14,12 +14,10 @@ describe('Testament', function () {
     await testament.deployed();
   });
 
-  describe('Deployement', function () {
-    it('Has name motherfucker', async function () {
-      Testament = await ethers.getContractFactory('Testament');
-      testament = await Testament.connect(doctor).deploy(owner.address, doctor.address);
-      await testament.deployed();
-      expect();
+  describe('Deployment', function () {
+    it('Should revert if owner and doctor are the same person.', async function () {
+      await expect(Testament.connect(dev).deploy(owner.address, owner.address)).to.revertedWith(
+        'Testament: You cannot define the owner and the doctor as the same person.');
     });
   });
 });
