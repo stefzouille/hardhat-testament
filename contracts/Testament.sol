@@ -2,8 +2,7 @@
 
 pragma solidity ^0.8.0;
 
-
-import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract Testament {
     using Address for address payable;
